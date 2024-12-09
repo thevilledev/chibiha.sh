@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChibiHash Official Benchmarks</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../ports.html">Unofficial Ports</a></li>
+                <li><a href="../benchmarks.html" class="active">Benchmarks</a></li>
+            </ul>
+            <button class="theme-switch" id="themeToggle">🌓</button>
+        </nav>
+    </header>
+
+    <h1>Official Benchmarks</h1>
+    <p>Taken from the official ChibiHash repository <a href="https://github.com/N-R-K/ChibiHash/commit/606209334862aa6123288ef11c4a8c18b3ef8b77">N-R-K/ChibiHash@6062093</a></p>
+    <p><a href="../benchmarks.html">← Back to benchmarks page</a></p>
+    <div class="benchmark-section">
+        <h2>Version 2 Benchmarks</h2>
+        <p>Benchmarks made via smhasher3</p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Large input (GiB/sec)</th>
+                <th>Small input (Cycles/Hash)</th>
+            </tr>
+            <tr>
+                <td>chibihash64</td>
+                <td>24.20</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>xxhash64</td>
+                <td>15.10</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>city64</td>
+                <td>18.30</td>
+                <td>47</td>
+            </tr>
+            <tr>
+                <td>spooky64</td>
+                <td>16.68</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>rapidhash.protected¹</td>
+                <td>21.50</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>polymur-hash¹²</td>
+                <td>13.82</td>
+                <td>43</td>
+            </tr>
+        </table>
+        <div class="note">
+            ¹ Requires compiler/cpu support for retrieving the full 128 bit result of a 64x64 bit multiply<br>
+            ² Universal, but has a complicated seeding step
+        </div>
+    </div>
+
+    <div class="benchmark-section">
+        <h2>Version 1 Benchmarks</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Large input (GiB/sec)</th>
+                <th>Small input (Cycles/Hash)</th>
+            </tr>
+            <tr>
+                <td>chibihash64</td>
+                <td>18.08</td>
+                <td>49</td>
+            </tr>
+            <tr>
+                <td>xxhash64</td>
+                <td>12.59</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>city64</td>
+                <td>14.95</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>spooky64</td>
+                <td>13.83</td>
+                <td>59</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p class="footer-text">Original ChibiHash implementation by <a href="https://github.com/N-R-K/">N-R-K</a>.</p>
+        <p class="footer-text">Website maintained by <a href="https://github.com/thevilledev">thevilledev</a> at <a href="https://github.com/thevilledev/chibihash-website">this GitHub repository</a>. Contributions welcome!</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html> 

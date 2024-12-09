@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChibiHash - Ports</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ports.html" class="active">Ports</a></li>
+                <li><a href="benchmarks.html">Benchmarks</a></li>
+            </ul>
+            <button class="theme-switch" id="themeToggle">🌓</button>
+        </nav>
+    </header>
+
+    <h1>Ports</h1>
+
+    <p><strong>Note:</strong> The ports listed here are unofficial and not maintained by the original ChibiHash author.</p>
+
+    <table class="ports-table">
+        <thead>
+            <tr>
+                <th>Language</th>
+                <th>Repository</th>
+                <th>v1</th>
+                <th>v2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rust</td>
+                <td><a href="https://github.com/jimexist/chibihash">jimexist/chibihash</a></td>
+                <td>✓</td>
+                <td>✗</td>
+            </tr>
+            <tr>
+                <td>Rust</td>
+                <td><a href="https://github.com/thevilledev/ChibiHash-rs">thevilledev/ChibiHash-rs</a></td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Go</td>
+                <td><a href="https://github.com/eranchetz/ChibiHashGo">eranchetz/ChibiHashGo</a></td>
+                <td>✓</td>
+                <td>✗</td>
+            </tr>
+            <tr>
+                <td>Go</td>
+                <td><a href="https://github.com/rainrambler/ChibiHashGo">rainrambler/ChibiHashGo</a></td>
+                <td>✓</td>
+                <td>✗</td>
+            </tr>
+            <tr>
+                <td>Haskell</td>
+                <td><a href="https://github.com/thevilledev/ChibiHash-hs">thevilledev/ChibiHash-hs</a></td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>C++</td>
+                <td><a href="https://github.com/seanmiddleditch/chibihash_cpp">seanmiddleditch/chibihash_cpp</a></td>
+                <td>✓</td>
+                <td>✗</td>
+            </tr>
+            <tr>
+                <td>Zig</td>
+                <td><a href="https://github.com/thevilledev/ChibiHash-zig">thevilledev/ChibiHash-zig</a></td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p class="footer-text">Original ChibiHash implementation by <a href="https://github.com/N-R-K/">N-R-K</a>.</p>
+        <p class="footer-text">Website maintained by <a href="https://github.com/thevilledev">thevilledev</a> at <a href="https://github.com/thevilledev/chibihash-website">this GitHub repository</a>. Contributions welcome!</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html> 
