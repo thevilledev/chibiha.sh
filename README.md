@@ -2,6 +2,8 @@
 
 Community-maintained website for ChibiHash, available at [chibiha.sh](https://chibiha.sh).
 
+Community updates will be announced on the [ChibiHash account on X](https://x.com/chibihash).
+
 ## Contributing
 
 Contributions are welcome! Open a pull request to add your port or benchmark.

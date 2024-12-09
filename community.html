@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChibiHash Benchmarks</title>
+    <title>ChibiHash - Community</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Page specific styles only */
-    </style>
 </head>
 <body>
     <header class="header">
@@ -15,28 +12,36 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="ports.html">Ports</a></li>
-                <li><a href="benchmarks.html" class="active">Benchmarks</a></li>
-                <li><a href="community.html">Community</a></li>
+                <li><a href="benchmarks.html">Benchmarks</a></li>
+                <li><a href="community.html" class="active">Community</a></li>
             </ul>
             <button class="theme-switch" id="themeToggle">🌓</button>
         </nav>
     </header>
 
-    <h1>Benchmarks</h1>
-    <p>Collection of benchmarks for ChibiHash and various implementations.</p>
+    <h1>Community</h1>
+    <p>Join the ChibiHash community and stay updated with the latest developments.</p>
 
-    <div class="benchmark-section">
-        <h2>Official</h2>
-        <ul>
+    <div class="community-section">
+        <h2>Social Media</h2>
+        <ul class="social-links">
             <li>
-                <p>Official benchmarks from the ChibiHash repository, comparing v1 and v2 against other hash functions <a href="benchmarks/official.html">available here</a>.</p>
+                <a href="https://x.com/chibihash" class="social-link">
+                    <span class="social-icon">𝕏</span>
+                    Follow @chibihash on X (Twitter)
+                </a>
             </li>
         </ul>
     </div>
 
-    <div class="benchmark-section">
-        <h2>Community</h2>
-        <p>No community benchmarks available yet. Add yours to <a href="https://github.com/thevilledev/chibihash-website">the website repository</a>!</p>
+    <div class="community-section">
+        <h2>Contributing</h2>
+        <p>This website is community-maintained and open source. You can contribute in several ways:</p>
+        <ul>
+            <li>Add your implementation to the <a href="ports.html">ports page</a></li>
+            <li>Share your benchmarks on the <a href="benchmarks.html">benchmarks page</a></li>
+            <li>Improve the website by submitting PRs to the <a href="https://github.com/thevilledev/chibihash-website">website repository</a></li>
+        </ul>
     </div>
 
     <footer>
@@ -46,15 +51,15 @@
 
     <script>
         const themeToggle = document.getElementById('themeToggle');
-
+        
         // Check for saved theme preference
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
-
+        
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
+            
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
         });
