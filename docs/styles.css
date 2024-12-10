@@ -45,8 +45,8 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 1rem;
+    position: relative;
 }
 
 .hamburger {
@@ -92,6 +92,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+    flex: 1;
 }
 
 .nav-links a {
@@ -210,6 +211,7 @@ th {
     justify-content: center;
     flex-shrink: 0;
     font-size: 0.8rem;
+    margin-left: auto;
 }
 
 /* Link styles */
@@ -303,6 +305,7 @@ footer {
 @media (max-width: 600px) {
     .hamburger {
         display: flex;
+        z-index: 2;
     }
 
     .nav-links {
@@ -316,21 +319,21 @@ footer {
         padding: 1rem;
         border-bottom: 1px solid var(--border-color);
         margin: 0;
+        z-index: 1;
     }
 
     .nav {
-        position: relative;
-        padding: 0;
         width: 100%;
-        justify-content: space-between;
-    }
-
-    .header {
-        padding: 0.75rem;
+        padding: 0;
     }
 
     .nav-links.active {
         display: flex;
+    }
+
+    .theme-switch {
+        position: relative;
+        z-index: 2;
     }
 
     .nav-links a {
