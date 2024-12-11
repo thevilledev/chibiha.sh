@@ -1,6 +1,8 @@
-# chibihash-website
+# chibiha.sh
 
-Community-maintained website for ChibiHash, available at [chibiha.sh](https://chibiha.sh).
+Community-maintained website for ChibiHash - a small, fast, portable 64-bit hash function.
+
+Site hosted at Github Pages and available at [chibiha.sh](https://chibiha.sh).
 
 Community updates will be announced on the [ChibiHash account on X](https://x.com/chibihash).
 
