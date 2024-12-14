@@ -352,4 +352,14 @@ footer {
     body {
         padding: 1rem;
     }
-} 
+}
+
+td.success {
+    color: #2ecc71;
+    text-align: center;
+}
+
+td.failure {
+    color: #e74c3c;
+    text-align: center;
+}
