@@ -1,0 +1,13 @@
+on:
+  deployment_status:
+
+jobs:
+  after-deploy:
+    if: github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'github-pages'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge cache
+        uses: jakejarvis/cloudflare-purge-action@eee6dba0236093358f25bb1581bd615dc8b3d8e3 # v0.3.0
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CF_ZONE_ID }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CF_API_KEY }}
