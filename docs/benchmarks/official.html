@@ -25,11 +25,11 @@
     </header>
 
     <h1>Official Benchmarks</h1>
-    <p>Taken from the official ChibiHash repository <a href="https://github.com/N-R-K/ChibiHash/commit/606209334862aa6123288ef11c4a8c18b3ef8b77">N-R-K/ChibiHash@6062093</a></p>
     <p><a href="../benchmarks">← Back to benchmarks page</a></p>
     <div class="benchmark-section">
         <h2>Version 2 Benchmarks</h2>
-        <p>Benchmarks made via smhasher3</p>
+        <p>Taken from the official ChibiHash repository <a href="https://github.com/N-R-K/ChibiHash/commit/606209334862aa6123288ef11c4a8c18b3ef8b77">N-R-K/ChibiHash@6062093</a> and this comment from the original author <a href="https://github.com/N-R-K/ChibiHash/issues/6#issuecomment-2536229520">N-R-K/ChibiHash#6</a>.</p>
+        <p>Benchmarks made with <strong>smhasher3</strong>.</p>
         <table>
             <tr>
                 <th>Name</th>
@@ -37,9 +37,14 @@
                 <th>Small input (Cycles/Hash)</th>
             </tr>
             <tr>
-                <td>chibihash64</td>
-                <td>24.20</td>
-                <td>34</td>
+                <td>chibihash64 (v2)</td>
+                <td>24.25</td>
+                <td>34.55</td>
+            </tr>
+            <tr></tr>
+                <td>chibihash64 (v1)</td>
+                <td>22.65</td>
+                <td>42.16</td>
             </tr>
             <tr>
                 <td>xxhash64</td>
@@ -75,6 +80,7 @@
 
     <div class="benchmark-section">
         <h2>Version 1 Benchmarks</h2>
+        <p>Benchmarks made with <strong>smhasher</strong>. Not comparable to the benchmarks above.</p>
         <table>
             <tr>
                 <th>Name</th>
@@ -82,7 +88,7 @@
                 <th>Small input (Cycles/Hash)</th>
             </tr>
             <tr>
-                <td>chibihash64</td>
+                <td>chibihash64 (v1)</td>
                 <td>18.08</td>
                 <td>49</td>
             </tr>
